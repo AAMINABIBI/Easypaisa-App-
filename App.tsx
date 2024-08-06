@@ -11,7 +11,6 @@ import { Comp1 } from './Components/Comp1'
 import Comp3 from './Components/Comp3'
 import Comp2 from './Components/Comp2'
 import Comp4 from './Components/Comp4'
-
 import BottomNavbar from './Components/BottomNavbar'
 const App = () => {
 

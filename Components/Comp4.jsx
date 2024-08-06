@@ -2,53 +2,28 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
+
+const texts=[
+  {name:'download',txt:'EasyLoad'},
+  {name:'handshake-o',txt:'Easycash Loan'},
+  {name:'gift',txt:'Tohfa'},
+  {name:'envelope',txt:'Invite & Earn'},
+  {name:'bell',txt:'Raast Payment'},
+  {name:'calendar',txt:'Mini App'},
+  {name:'camera',txt:'Savings'},
+  {name:'info-circle',txt:'Insurance'},
+  {name:'battery-1',txt:'Rs. 1 Game'},
+  {name:'info-circle',txt:'Donation'},
+  {name:'dot-circle-o',txt:'See All'},
+]
 const EightIconsNavbar = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="download" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>EasyLoad</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="handshake-o" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Easycash Loan</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="gift" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Tohfa</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="envelope" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Invite & Earn</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="bell" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Raast Payment</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="calendar" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Mini App</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="camera" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Savings</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="info-circle" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Insurance</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="info-circle" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Donation</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="battery-1" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>Rs. 1 Game</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome name="dot-circle-o" size={40} color="#16ba64" style={styles.icon} />
-        <Text style={styles.label}>See All</Text>
-      </TouchableOpacity>
+
+  {texts.map((text,index)=>(<TouchableOpacity key={index}  style={styles.button}>
+        <FontAwesome name={text.name} size={40} color="#16ba64" style={styles.icon} />
+        <Text style={styles.label}>{text.txt}</Text>
+      </TouchableOpacity>))}
     </View>
   );
 };
